@@ -1,0 +1,15 @@
+{
+    "name": "mr.savagery/phpmastering",
+    "autoload": {
+        "psr-4": {
+            "MrSavagery\\Phpmastering\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "baltonCome",
+            "email": "baltoncome@outlook.com"
+        }
+    ],
+    "require": {}
+}
