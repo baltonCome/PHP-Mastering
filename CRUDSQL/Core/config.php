@@ -23,3 +23,4 @@ $cPdo = new PDO("mysql:host=$host; charset =$charset", $username, $password, $op
 if(createDatabase($cPdo, $dbname) === true){
     $pdo = new PDO($dsn, $username, $password, $options);
 }
+createTable($pdo);

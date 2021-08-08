@@ -36,7 +36,7 @@ session_start();
     }
 
     if(isset($_POST["update"])){
-        
+
         if(valid_data($_POST['name'],$_POST['email'])){
             if(secure_and_clean(update($pdo, $_POST['id'], $_POST['name'], $_POST['email']))){
                 $_SESSION['report'] = 'Sucessfuly Updated';

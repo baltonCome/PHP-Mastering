@@ -1,4 +1,8 @@
 <?php
+
+    /*
+        Um dia ainda faço a documentação deste codigo!
+    */
     session_start();
     if(isset($_SESSION['report'])){
         $_SESSION['report'] = 'Sucessfuly added';
@@ -39,6 +43,8 @@
             }else{
                 ?>
                 <tr>
+                    <td>=</td>
+                    <td>=</td>
                     <td>=</td>
                     <td>=</td>
                     <td>=</td>
