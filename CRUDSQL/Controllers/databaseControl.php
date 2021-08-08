@@ -58,12 +58,8 @@ function insert($pdo, $name, $email){
         ];
 
         $sql = "INSERT INTO USUARIOS set firstname=:firstname, email=:email;";
-        $status = $pdo -> prepare($sql) -> execute ($row);
-
-        if($status){
-            $id = (int) $pdo -> lastInsertId();
-        }
-        echo $id;
+        $pdo -> prepare($sql) -> execute ($row);
+        return true;
     }catch(PDOException $e){
         echo $sql . "<br>" . $e->getMessage();
     }finally{
@@ -81,7 +77,8 @@ function update($pdo, $userId, $name, $email){
         ];
 
         $sql = "update usuarios set firstname=:firstname,  email=:email where id=:id;";
-        return $pdo -> prepare($sql) -> execute ($row);
+        $pdo -> prepare($sql) -> execute ($row);
+        return true;
     }catch(PDOException $e){
         echo $e->getMessage();
     }finally{
@@ -93,7 +90,8 @@ function delete($pdo, $userId){
 
     try{
         $where = ['id' => $userId ];
-        echo $pdo -> prepare("Delete From usuarios where id=:id") -> execute($where);
+        $pdo -> prepare("Delete From usuarios where id=:id") -> execute($where);
+        return true;
     }catch(PDOException $e){
         echo $e -> getMessage();
     }finally{

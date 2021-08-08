@@ -1,0 +1,77 @@
+*{
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+tr{
+    background-color: cadetblue;
+}
+
+tr> th, td{
+    padding: 1rem;
+    width: 11rem;
+}
+
+table{
+    width: 100%;
+    text-align: left;
+    border-collapse:collapse; 
+}
+
+#content{
+    align-content: center;
+    max-width: 960px;
+    display: grid;
+    margin: auto;
+}
+
+tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+.btn{
+    padding: 0.5rem;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.2rem;
+    background-color:darkcyan;
+    width: 3.5rem;
+    float: right;
+}
+
+#add, #save, #back, #update, #back2{
+    position: relative;
+    background-color: palevioletred;
+    width: 10rem;
+    top: 2rem;
+    padding: 0.6rem;
+}
+
+form{
+    align-items: center;
+}
+
+input{
+    border: none;
+    background-color: aqua;
+}
+
+#name{
+    position: relative;
+    left: -0.5rem;
+    width: 14.5rem;
+    min-height: 5rem;
+    border-radius: 0.5rem;
+}
+
+#email{
+    position: relative;
+    right: -0.5rem;
+    width: 14.5rem;
+    min-height: 5rem;
+    border-radius: 0.5rem;
+}

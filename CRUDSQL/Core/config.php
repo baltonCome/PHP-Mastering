@@ -1,6 +1,6 @@
 <?php
 
-require_once('databaseControl.php');
+require_once __DIR__ . '/../Controllers/databaseControl.php';
 
 $host = '127.0.0.1:3307';
 $dbname = 'Info';
